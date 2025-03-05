@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import GlobalContext from '../contexts/GlobalContext'
 
-import MoviesCard from "./MoviesCard";
+import MoviesCard from "./MovieCard";
 
 export default function MoviesList() {
 
@@ -13,7 +13,7 @@ export default function MoviesList() {
             <div className="movieContainerCard">
                 {
                     movies.map((movie) => (
-                        <MoviesCard key={movie.id} movie={movie} />
+                        <MovieCard key={movie.id} movie={movie} />
                     ))
                 }
             </div>
@@ -22,7 +22,7 @@ export default function MoviesList() {
             <div className="movieContainerCard">
                 {
                     tvSeries.map((tvSerie) => (
-                        <MoviesCard key={tvSerie.id} tvSerie={tvSerie} />
+                        <MovieCard key={tvSerie.id} tvSerie={tvSerie} />
                     ))
                 }
             </div>
