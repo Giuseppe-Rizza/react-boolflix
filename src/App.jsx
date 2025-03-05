@@ -13,6 +13,7 @@ import Homepage from './pages/Homepage'
 function App() {
 
   const [movies, setMovies] = useState([]);
+  const [tvSeries, setTvSeries] = useState([]);
 
   const api_key = "d97d4ff55365a734c141e86788450f12";
 
@@ -27,9 +28,20 @@ function App() {
         setMovies(res.data.results)
       )
 
-
       .catch((err) => console.error("Errore:", err));
 
+
+    axios.get("https://api.themoviedb.org/3/search/tv", {
+      params: {
+        api_key: api_key,
+        query: query
+      }
+    })
+      .then((res) =>
+        setTvSeries(res.data.results)
+      )
+
+      .catch((err) => console.error("Errore:", err));
   }
 
 
@@ -39,7 +51,7 @@ function App() {
 
   return (
     <>
-      <GlobalContext.Provider value={{ movies, fetchData }}>
+      <GlobalContext.Provider value={{ movies, tvSeries, fetchData }}>
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />} >
