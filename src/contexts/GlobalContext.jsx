@@ -1,9 +1,5 @@
 import { createContext } from "react";
 
-const GlobalContext = createContext({
-    movies: [],
-    tvSeries: [],
-    fetchData: () => { }
-});
+const GlobalContext = createContext();
 
 export default GlobalContext;

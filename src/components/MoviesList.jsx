@@ -5,11 +5,11 @@ import MoviesCard from "./MovieCard";
 
 export default function MoviesList() {
 
-    const { movies = [], tvSeries = [] } = useContext(GlobalContext);
+    const { movies, tvSeries } = useContext(GlobalContext);
 
     return (
         <>
-            <h1>Film</h1>
+            {movies.length > 0 && <h1 className="category">Film</h1>}
             <div className="movieContainerCard">
                 {
                     movies.map((movie) => (
@@ -18,7 +18,7 @@ export default function MoviesList() {
                 }
             </div>
 
-            <h1>Serie TV</h1>
+            {tvSeries.length > 0 && <h1 className="category">Serie TV</h1>}
             <div className="movieContainerCard">
                 {
                     tvSeries.map((tvSerie) => (

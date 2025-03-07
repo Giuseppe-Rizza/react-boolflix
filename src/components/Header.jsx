@@ -21,15 +21,15 @@ export default function Header() {
 
     return (
         <header>
+            <h1>BOOLFLIX</h1>
             <form id='formpost' onSubmit={handleSubmit}>
                 <input
                     type="text"
                     name="search"
                     value={formData.search}
                     onChange={handleFormData}
-                    placeholder='Search'
+                    placeholder='Search...'
                 />
-                <button>Search</button>
             </form>
         </header>
     );

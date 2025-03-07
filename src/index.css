@@ -11,3 +11,37 @@ movieContainerCard {
   padding: 20px;
   border: 3px solid black;
 }
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: black;
+}
+
+#formpost {
+  align-content: center;
+}
+
+.posterImg {
+  width: 100%;
+  height: 100%;
+}
+
+.movieTextCard {
+  display: none;
+}
+
+.movieCard:hover .movieTextCard {
+  display: block;
+}
+
+.movieCard:hover .posterImg {
+  display: none;
+}
+
+.category {
+  text-align: center;
+}
